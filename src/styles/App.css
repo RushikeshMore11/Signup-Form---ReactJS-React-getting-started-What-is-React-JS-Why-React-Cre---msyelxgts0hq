@@ -5,8 +5,23 @@ h1 {
     
 
 button{
-    color: #27aedb;
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    color: #0b65f7;
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    padding: 12px;
+    background-color: aqua;
+    
+}
+.field{
+    border-bottom: 2px solid black;
+    background-color: bisque;
+    padding: 2%;
+    margin: 2%;
+    text-align:left;
+}
+input{
+    padding: 5px;
+    outline: none;
 }
