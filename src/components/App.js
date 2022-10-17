@@ -9,15 +9,43 @@ const App = () => {
     phoneNumber: '',
     password: ''
   })
+  const [error,setError] = useState("");
   const onChangeHandler = (event) => {
     setGetForm({
       ...getForm,
       [event.target.name]: event.target.value
     })
   }
+  const errorhadler = () =>{
+    if(!getForm.name && !getForm.email && !getForm.phoneNumber && !getForm.password){
+      setError('All fields are mandatory');
+      return true;
+    }
+    if(!getForm.name){
+      setError('Name Error');
+      return true;
+    }
+    if(!getForm.email){
+      setError('Email Error');
+      return true;
+    }
+    if(!getForm.phoneNumber){
+      setError('Phone Number Error');
+      return true;
+    }
+    if(!getForm.password){
+      setError('Password Error');
+      return true;
+    }
+    return false;
+  }
   const onSubmitHandler = (e)=>{
+    setError('');
     e.preventDefault();
-    console.log(getForm);
+    if(errorhadler()){
+      return true;
+    }
+    alert("Successfully Submitted the Form")
   }
   return (
     <div id="main">
@@ -43,6 +71,7 @@ const App = () => {
           Password | <input onChange={onChangeHandler} type="password" name="password" id="password" placeholder="Password..." data-testid='password' />
         </div>
         <button onClick={onSubmitHandler} data-testid='submit' type="submit"> Submit button </button>
+        {error}
       </form>
     </div>
   )
