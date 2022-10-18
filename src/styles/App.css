@@ -58,3 +58,6 @@ input {
 option{
     width: inherit;
 }
+.user{
+    background-color: rgb(176, 150, 241);
+}

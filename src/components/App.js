@@ -107,7 +107,7 @@ const App = () => {
         </div>
         <button onClick={onSubmitHandler} data-testid='submit' type="submit"> Submit button </button>
         {error}
-       <h1> {error==false?username:''}</h1>
+       <h1 className="user"> {error==false?username:''}</h1>
       </form>
     </div>
   )
