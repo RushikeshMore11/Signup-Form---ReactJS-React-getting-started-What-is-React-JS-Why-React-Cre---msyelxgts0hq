@@ -1,6 +1,11 @@
 body {
     background: linear-gradient(to right, #78b7eb, rgb(57, 221, 213));
 }
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0 ;
+}
 
 h1 {
     color: #311d6d;
@@ -39,13 +44,17 @@ button:hover {
 .field {
     border-bottom: 2px solid black;
     width: 60%;
-    background-color: bisque;
+    background-color: rgb(171, 215, 231);
     padding: 2%;
     margin: 1%;
     text-align: left;
 }
 
 input {
+    width: inherit;
     padding: 1px;
     outline: none;
+}
+option{
+    width: inherit;
 }
